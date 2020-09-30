@@ -12,7 +12,7 @@ terraform {
 }
 
 resource "aws_instance" "first_task" {
-  ami             = "ami-0bfbfa28c5682b543"
+  ami             = "ami-06fd8a495a537da8b"
   instance_type   = "t2.micro"
   key_name        = "MyNewPair"
   security_groups = ["launch-wizard-1"]
@@ -24,7 +24,7 @@ resource "aws_instance" "first_task" {
   }
 }
 resource "aws_instance" "second_node" {
-  ami                    = "ami-0bfbfa28c5682b543"
+  ami                    = "ami-06fd8a495a537da8b"
   instance_type          = "t2.micro"
   key_name               = "MyNewPair"
   vpc_security_group_ids = [aws_security_group.demo_sg.id]
